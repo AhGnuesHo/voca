@@ -3,12 +3,15 @@ import './App.css';
 // .확장자는 생략
 import Hello from './component/Hello';
 import Welcome from './component/Welcome';
-function App() {
-  
+import styles from './App.module.css';
+
+function App() {  
   return(
     <div className="App">
       <Hello/>
       <Welcome/>
+      <div className={styles.box}>App
+      </div>
     </div>
   )
 }

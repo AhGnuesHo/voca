@@ -1,3 +1,5 @@
+/* App컴포넌트에만 영향을 미치는 css */
+/* 주의 : 오버라이딩이 된다.  */
 .App {
   text-align: center;
 }
@@ -36,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+
