@@ -1,17 +1,13 @@
-import './App.css';
-// 만든 컴포넌트 사용해보기 
-// .확장자는 생략
-import Hello from './component/Hello';
-import Welcome from './component/Welcome';
-import styles from './App.module.css';
+import Header from "./component/Header"
+import DayList from "./component/DayList"
+import Day from "./component/Day"
 
 function App() {  
   return(
     <div className="App">
-      <Hello age = {10} />
-      <Hello age = {30} />
-      <Hello age = {40}/>
-      
+      <Header></Header>
+      <DayList/>
+      <Day></Day>
       </div>
 
   )
