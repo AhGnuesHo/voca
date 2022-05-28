@@ -2,23 +2,24 @@
 
 import World from "./World";
 import styles from "./Hello.module.css";
+import { useState } from "react";
 
 const Hello = () => {
+    const [name, setName] = useState('Mike');
+
     return (
         <div>
-            <h1>Hello</h1>
-            <button onClick = {showName}>show name</button>
+            <h1>state</h1>
+            <h1>컴포넌트의 속성값</h1>
+            <h1 className="name">{name}</h1>
             <button onClick = {() => {
-                console.log("20")
-            }}>show age</button>
-            <input type = "text" onChange={(e) => console.log(e.target.value)}></input>
-
+                setName(name === "Mike" ? "Jane" : "Mike");
+            }}>changNameButton</button>
+            
+            
         </div>
     );
 }
-// 미리 함수를 만들어 전달
-function showName(){
-    console.log("seung")
-}
+
 
 export default Hello;
