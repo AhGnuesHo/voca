@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useFatch from "../hooks/useFatch";
 // import dummy from "../db/data.json"
 
 export default function DayList() {
-  // 함수가 전달된 후 재랜더링, 매개변수 count가 변경될 때만 실행, 매개변수 빈배열
-  const [days, setDays] = useState([]);
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    return console.log("Count change");
-  }, []);
+  const days = useFatch(`http://localhost:3001/days/`);
+
   return (
     <>
       <ul className="list_day">
@@ -20,19 +17,7 @@ export default function DayList() {
           );
         })}
       </ul>
-      <button
-        onClick={() => {
-          return setCount(count + 1);
-        }}
-      >
-        {count}
-      </button>
-      <button onClick ={() =>{
-          return setDays([...days, {
-              id : Math.random(),
-              day : 1
-          }])
-      }}>day추가</button>
+    
     </>
   );
 }
