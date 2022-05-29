@@ -6,9 +6,9 @@ export default function Header() {
         <Link to ="/">영단어(고급)</Link>
       </h1>
       <div className="menu">
-        <a href="/" className="link">
+        <Link to ="/create_word" className="link">
           단어 추가
-        </a>
+        </Link>
         <a href="/" className="link">
           Day 추가
         </a>
